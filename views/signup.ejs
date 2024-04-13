@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body id="registration">
+    <div class="registration-container">
+        <h2>Создайте учетную запись</h2>
+        <form action="/auth/register" method="post" enctype="application/x-www-form-urlencoded">
+            <label for="registerName">Имя</label>
+            <input type="text" id="registerName" name="name" required>
+
+            <label for="registerSurname">Фамилия</label>
+            <input type="text" id="registerSurname" name="surname" required>
+
+            <label for="registerPlace">Название ресторана (необязательно)</label>
+            <input type="text" id="registerPlace" name="place">
+
+            <label for="registerEmail">Электронная почта</label>
+            <input type="text" id="registerEmail" name="email" required>
+
+            <label for="registerPassword">Пароль</label>
+            <input type="password" id="registerPassword" name="password" required>
+
+            <!-- <label for="confirmPassword">Подтвердите пароль</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required> -->
+
+            <button type="submit">Продолжить</button>
+        </form>
+    </div>
+    <script src="public/js/script.js"></script>
+</body>
+
+</html>

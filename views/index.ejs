@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qansha AI</title> <!-- The title of the webpage, shown in the browser tab. -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Bootstrap's CSS framework is included for a responsive grid layout and ready-made components. -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header>
+        <%- include('navbar') %>
+        <div id="video-container">
+            <video id="myVideo" autoplay muted loop>
+                <source src="video/v1.mp4" type="video/mp4">
+            </video>
+
+            <!-- text on the video -->
+            <div id="video-message">
+                <p id="message-one" class="video-message">Unleashing Innovation with Qansha AI</p>
+                <p id="message-two" class="video-message">Join us on a journey.</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Brand logo and introductory text -->
+        <section class="brand-introduction text-center my-5">
+            <!-- Adjust size as needed -->
+            <h2 class="text-center display-4 font-weight-bold">Discover the Qansha AI</h2>
+            <p class="text-center lead">Welcome to the innovative project with AI integration that helps businesses to
+                grow and increase the revenue based on analysis of data.</p>
+        </section>
+
+        <section class="newsletter-signup">
+            <h2>Subscribe to Our Newsletter</h2>
+            <form id="newsletterForm">
+                <input type="email" id="newsletterEmail" name="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn newsletter-signup pulse">Subscribe</button>
+            </form>
+        </section>
+        </div>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
