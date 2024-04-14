@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .inventory-hidden {
+            display: none;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .inventory-visible {
+            display: block;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('navbar') %>
+        <div class="inventory-container">
+            <h1 class="inventory-header">Отчет покупок</h1>
+            <span class="inventory-date">Апрель 14, 2024</span>
+            <div class="inventory-search">
+                <input type="text" placeholder="Искать">
+                <button>🔍</button>
+                <button>Обновить</button>
+            </div>
+            <div class="inventory-container inventory-hidden" id="inventoryStats">
+                <!-- Stats and images go here -->
+                <img src="../images/fourth_stats.png" style="max-width: 200px;">
+                <img src="../images/third_stats.png" style="max-width: 200px;">
+            </div>
+            <table class="inventory-table inventory-hidden" id="inventoryTable">
+                <thead>
+                    <tr>
+                        <th>КАТЕГОРИЯ</th>
+                        <th>INVENTORY ITEM</th>
+                        <th>UOM</th>
+                        <th>OPENING INVENTORY</th>
+                        <th>OPENING VALUE</th>
+                        <th>PURCHASE QTY</th>
+                        <th>PURCHASE VALUE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Repeat this row for each inventory item -->
+                    <tr>
+                        <td>Вино</td>
+                        <td>Вино из Шардоне</td>
+                        <td>EA</td>
+                        <td>4</td>
+                        <td>14.000</td>
+                        <td>48</td>
+                        <td>170.000</td>
+                    </tr>
+                    <!-- Additional rows... -->
+                </tbody>
+            </table>
+        </div>
+        <script>
+            document.querySelector('.inventory-search button:last-child').addEventListener('click', function () {
+                var inventoryStats = document.getElementById('inventoryStats');
+                var inventoryTable = document.getElementById('inventoryTable');
+                inventoryStats.classList.toggle('inventory-hidden');
+                inventoryStats.classList.toggle('inventory-visible');
+                inventoryTable.classList.toggle('inventory-hidden');
+                inventoryTable.classList.toggle('inventory-visible');
+            });
+        </script>
+</body>
+
+</html>

@@ -14,41 +14,32 @@
 
 <body>
     <header>
-        <%- include('navbar') %>
         <div id="video-container">
             <video id="myVideo" autoplay muted loop>
-                <source src="video/v1.mp4" type="video/mp4">
+                <source src="video/1.mp4" type="video/mp4">
             </video>
 
             <!-- text on the video -->
             <div id="video-message">
-                <p id="message-one" class="video-message">Unleashing Innovation with Qansha AI</p>
-                <p id="message-two" class="video-message">Join us on a journey.</p>
+                <p id="message-one" class="video-message">Qansha AI: ваш надежный аналитик в мире доходов и продаж</p>
+                <p id="message-two" class="video-message">Увеличьте свои продажи с инновационными решениями от Qansha AI
+                </p>
             </div>
         </div>
     </header>
 
     <main>
-
-        <!-- Brand logo and introductory text -->
-        <section class="brand-introduction text-center my-5">
-            <!-- Adjust size as needed -->
-            <h2 class="text-center display-4 font-weight-bold">Discover the Qansha AI</h2>
-            <p class="text-center lead">Welcome to the innovative project with AI integration that helps businesses to
-                grow and increase the revenue based on analysis of data.</p>
-        </section>
-
-        <section class="newsletter-signup">
-            <h2>Subscribe to Our Newsletter</h2>
-            <form id="newsletterForm">
-                <input type="email" id="newsletterEmail" name="email" placeholder="Enter your email" required>
-                <button type="submit" class="btn newsletter-signup pulse">Subscribe</button>
-            </form>
-        </section>
+        <div class="container mt-5 mb-5">
+            <h2 class="text-center display-4 font-weight-bold" style="margin-top: 100px;">Qansha AI</h2>
+            <p class="text-center lead" style="margin-top: 25px">Добро пожаловать на проект с интеграцией ИИ, который помогает бизнесам расти и увеличить прибыль на основе анализа данных.</p>
+            <div class="text-center mt-4">
+                <a href="login" class="btn btn-primary">Логин</a>
+                <a href="signup" class="btn btn-success">Регистрация</a>
+            </div>
         </div>
     </main>
 
-    <script src="../js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

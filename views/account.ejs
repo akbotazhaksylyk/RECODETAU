@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .container-fluid {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .profile-card,
+        .profile-info,
+        .balance-card,
+        .goals-card {
+            background: #FFF;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            /* Space between rows */
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .restaurant-logo {
+            max-width: 80%;
+            display: block;
+            /* Ensures the image doesn't exceed its container */
+            margin: 0 auto;
+            /* Centers the image */
+        }
+
+        .profile-info,
+        .balance-card,
+        .goals-card {
+            text-align: center;
+            /* Centers the text */
+        }
+
+        /* Bootstrap grid system and responsive utilities */
+        @media (min-width: 768px) {
+            .col-md-6 {
+                width: 50%;
+                float: left;
+            }
+        }
+
+        /* Ensure that the boxes do not stretch too wide on larger screens */
+        @media (min-width: 992px) {
+            .container-fluid {
+                max-width: 960px;
+            }
+        }
+
+        /* Clean up floats for smaller devices */
+        @media (max-width: 767px) {
+            .col-md-6 {
+                float: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('navbar') %>
+        <div class="container-fluid">
+            <div class="row">
+                <!-- First Row -->
+                <div class="col-md-6">
+                    <div class="profile-card">
+                        <img src="../images/sandyq.png" alt="Restaurant Logo" class="restaurant-logo">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="profile-info">
+                        <h3 class="restaurant-name">Sandyq</h3>
+                        <div class="rating">★★★★☆ 4.7</div>
+                        <p class="address">Turkestan, Sattarkhanov Avenue, 25A</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Second Row -->
+                <div class="col-md-6">
+                    <div class="balance-card">
+                        <h4>Total Balance</h4>
+                        <div class="balance-amount">3.450.000 ₸</div>
+                        <!-- More balance info here -->
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="goals-card">
+                        <h4>Goals</h4>
+                        <div class="goal-amount">250.000.000 ₸</div>
+                        <!-- More goals info here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

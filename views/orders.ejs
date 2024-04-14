@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <%- include('navbar') %>
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h1>Hello, Admin</h1>
+            <span>April 14, 2024</span>
+            <div class="search-bar">
+                <input type="text" placeholder="Search here">
+                <button>🔍</button>
+            </div>
+        </div>
+        <div class="stats-overview">
+            <div class="card summary">
+                <p>Number of orders: 6</p>
+                <p>Orders sold for: 182.700 ₮</p>
+                <p>Net revenue: 100.000 ₮</p>
+            </div>
+            <div class="card graph">
+                <!-- Insert graph here -->
+            </div>
+        </div>
+
+        <br>
+        
+        <div class="orders-history">
+            <h2>Orders History</h2>
+            <!-- Repeat this block for each order -->
+            <div class="card order">
+                <h3>Order 1</h3>
+                <p>30.450 ₮</p>
+                <!-- List items of the order -->
+                <p>Caesar salad 2.500 ₮</p>
+                <p>Beshbarmak 12.500 ₮</p>
+                <p>Barbecue 15.450 ₮</p>
+            </div>
+            <!-- ... more orders -->
+        </div>
+    </div>
+    
+</body>
+
+</html>

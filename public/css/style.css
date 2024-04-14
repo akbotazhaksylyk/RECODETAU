@@ -16,9 +16,12 @@ nav {
     /* Dark background color */
     overflow-x: hidden;
     /* Hide horizontal overflow */
-    padding-left: 10px; /* Add padding to the left */
-    padding-right: 10px; /* Add padding to the right */
-    box-sizing: border-box; /* Include padding in the width calculation */
+    padding-left: 10px;
+    /* Add padding to the left */
+    padding-right: 10px;
+    /* Add padding to the right */
+    box-sizing: border-box;
+    /* Include padding in the width calculation */
 }
 
 /* Style for the navbar list */
@@ -32,7 +35,8 @@ nav ul {
 }
 
 nav li {
-    margin-bottom: 10px; /* Add some space between the navigation items */
+    margin-bottom: 10px;
+    /* Add some space between the navigation items */
 }
 
 /* Style for navbar links */
@@ -45,11 +49,16 @@ nav a {
     /* Text size */
     color: white;
     /* Text color */
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Vertically center the items */
-    border-radius: 9px; /* Rounded corners for links */
-    transition: background-color 0.3s; /* Smooth transition for background color */
-    width: calc(100% - 20px); /* Adjust the width to account for padding */
+    display: flex;
+    /* Use flexbox for layout */
+    align-items: center;
+    /* Vertically center the items */
+    border-radius: 9px;
+    /* Rounded corners for links */
+    transition: background-color 0.3s;
+    /* Smooth transition for background color */
+    width: calc(100% - 20px);
+    /* Adjust the width to account for padding */
 }
 
 /* Hover effect for links */
@@ -62,7 +71,8 @@ nav a:hover {
 
 /* Active link styling */
 nav a:active {
-    background-color: #218177; /* Background color for active state */
+    background-color: #218177;
+    /* Background color for active state */
 }
 
 /* Style adjustments for main content area */
@@ -74,29 +84,38 @@ div.content {
 }
 
 .nav-icon {
-    margin-right: 10px; /* Add some space between the icon and the text */
-    height: 30px; /* Set your desired icon height */
-    vertical-align: middle; /* This can be removed, as flexbox handles alignment */
+    margin-right: 10px;
+    /* Add some space between the icon and the text */
+    height: 30px;
+    /* Set your desired icon height */
+    vertical-align: middle;
+    /* This can be removed, as flexbox handles alignment */
 }
 
 /* Additional styles for navbar branding */
 nav .navbar-brand {
     display: block;
-    margin-bottom: 30px; /* Space below the brand/logo */
+    margin-bottom: 30px;
+    /* Space below the brand/logo */
     /* Additional styling can go here */
 }
 
 /* Hamburger Menu Icon */
 .hamburger-menu {
-    display: none; /* Hidden by default */
-    cursor: pointer; /* Changes the cursor to a pointer when hovered */
+    display: none;
+    /* Hidden by default */
+    cursor: pointer;
+    /* Changes the cursor to a pointer when hovered */
 }
 
 /* Responsive navbar styles */
 /* Responsive navbar styles */
-@media (max-width: 768px) { /* Adjust this according to when you want the hamburger menu to kick in */
+@media (max-width: 768px) {
+
+    /* Adjust this according to when you want the hamburger menu to kick in */
     .hamburger-menu {
-        display: block; /* Show hamburger */
+        display: block;
+        /* Show hamburger */
         position: fixed;
         top: 20px;
         left: 20px;
@@ -106,36 +125,44 @@ nav .navbar-brand {
     #navList {
         position: fixed;
         top: 0;
-        left: -250px; /* Initially hide menu off-screen */
-        width: 250px; /* Width of the side menu */
+        left: -250px;
+        /* Initially hide menu off-screen */
+        width: 250px;
+        /* Width of the side menu */
         height: 100%;
         background-color: #191A1A;
-        overflow-y: auto; /* Enable scroll if content is longer than screen */
-        transition: left 0.3s; /* Animated transition for sliding in/out */
-        padding-top: 60px; /* Space for hamburger icon */
+        overflow-y: auto;
+        /* Enable scroll if content is longer than screen */
+        transition: left 0.3s;
+        /* Animated transition for sliding in/out */
+        padding-top: 60px;
+        /* Space for hamburger icon */
     }
 
     #navList li {
         padding: 8px;
-        border-bottom: 1px solid #333; /* Separator for menu items */
+        border-bottom: 1px solid #333;
+        /* Separator for menu items */
     }
-    
+
     /* Adjust text and icon alignment in mobile view */
     #navList a {
         display: flex;
         align-items: center;
         justify-content: flex-start;
     }
-    
+
     .nav-icon {
-        width: 20px; /* Adjust icon size for mobile */
+        width: 20px;
+        /* Adjust icon size for mobile */
         margin-right: 10px;
     }
 }
 
 /* Optional: Add a "menu-is-open" class for when menu is open */
 .menu-is-open {
-    left: 0; /* Move menu into view */
+    left: 0;
+    /* Move menu into view */
 }
 
 
@@ -172,50 +199,67 @@ footer p {
 
 /* ---------------------- REGISTRATION FORM ---------------------- */
 
-#registration {
-    font-family: Arial, sans-serif; /* Specify your font-family */
+#registration,
+#login {
+    font-family: Arial, sans-serif;
+    /* Specify your font-family */
     margin: 0;
-    padding-top: 70px; /* To avoid overlap with a fixed navbar if you have one */
+    padding-top: 70px;
+    /* To avoid overlap with a fixed navbar if you have one */
 }
 
-.registration-container {
+.registration-container,
+.login-container {
     max-width: 400px;
-    background-color: #ffffff; /* White background for the form */
+    background-color: #ffffff;
+    /* White background for the form */
     padding: 30px;
     margin: 50px auto;
-    border-radius: 10px; /* Rounded corners for the form container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Box shadow for some depth */
+    border-radius: 10px;
+    /* Rounded corners for the form container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    /* Box shadow for some depth */
 }
 
-.registration-container h2 {
-    color: #333; /* Dark text color for the heading */
+.registration-container h2,
+.login-container h2 {
+    color: #333;
+    /* Dark text color for the heading */
     text-align: center;
     margin-bottom: 30px;
 }
 
-.registration-container form {
+.registration-container form,
+.login-container form {
     display: flex;
     flex-direction: column;
 }
 
-.registration-container label {
-    color: #333; /* Dark text color for labels */
+.registration-container label,
+.login-container label {
+    color: #333;
+    /* Dark text color for labels */
     margin-bottom: 8px;
 }
 
 .registration-container input[type="text"],
-.registration-container input[type="password"] {
+.login-container input[type="text"],
+.registration-container input[type="password"],
+.login-container input[type="password"] {
     padding: 12px;
     margin-bottom: 20px;
-    border: 1px solid #ddd; /* Light border for the inputs */
+    border: 1px solid #ddd;
+    /* Light border for the inputs */
     border-radius: 5px;
     font-size: 14px;
 }
 
 /* Remove the <br> tags from your HTML to rely on margin-bottom for spacing */
 
-.registration-container button {
-    background-color: #279186; /* Green background color for the button */
+.registration-container button,
+.login-container button {
+    background-color: #279186;
+    /* Green background color for the button */
     color: white;
     padding: 12px 15px;
     font-size: 15px;
@@ -225,27 +269,33 @@ footer p {
     transition: background-color 0.3s;
 }
 
-.registration-container button:hover {
-    background-color: #218177; /* Darker green on hover */
+.registration-container button:hover,
+.login-container button:hover {
+    background-color: #218177;
+    /* Darker green on hover */
 }
 
 /* Enhance the focus state for better accessibility */
 .registration-container input[type="text"]:focus,
-.registration-container input[type="password"]:focus {
+.login-container input[type="text"]:focus,
+.registration-container input[type="password"]:focus,
+.login-container input[type="password"]:focus {
     border-color: #279186;
-    outline: none; /* Removing the default focus outline */
+    outline: none;
+    /* Removing the default focus outline */
 }
 
 /* ---------------------- CONTAINERS IN OVERVIEW ---------------------- */
 
 .dashboard-container {
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
         "header header"
         "cards cards"
         "profit stats";
     gap: 20px;
-    margin-left: 210px; /* Width of the navbar */
+    margin-left: 210px;
+    /* Width of the navbar */
     padding: 20px;
 }
 
@@ -267,7 +317,8 @@ footer p {
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex-basis: calc(50% - 10px); /* Adjust the width minus the gap */
+    flex-basis: calc(50% - 10px);
+    /* Adjust the width minus the gap */
 }
 
 .dashboard-charts {
@@ -291,20 +342,285 @@ footer p {
 /* Responsive behavior */
 @media (max-width: 768px) {
     .dashboard-container {
-        grid-template-areas: 
+        grid-template-areas:
             "header"
             "cards"
             "profit"
             "stats";
     }
-    
+
     .dashboard-cards,
     .dashboard-charts {
         flex-direction: column;
     }
-    
+
     .card,
     .chart {
-        flex-basis: auto; /* Cards take full width on smaller screens */
+        flex-basis: auto;
+        /* Cards take full width on smaller screens */
     }
+}
+
+/* ---------------------- LOGIN FORM ---------------------- */
+
+/* Shared styles for form containers */
+.form-container {
+    max-width: 400px;
+    background-color: #ffffff;
+    /* White background for the form */
+    padding: 30px;
+    margin: 50px auto;
+    border-radius: 10px;
+    /* Rounded corners for the form container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    /* Box shadow for some depth */
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container h2 {
+    color: #333;
+    /* Dark text color for the heading */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-container label {
+    color: #333;
+    /* Dark text color for labels */
+    display: block;
+    /* Make label take up its own line */
+    margin-bottom: 8px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"] {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    /* Light border for the inputs */
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-container button {
+    background-color: #279186;
+    /* Green background color for the button */
+    color: white;
+    padding: 12px 15px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+    background-color: #218177;
+    /* Darker green on hover */
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="password"]:focus {
+    border-color: #279186;
+    outline: none;
+    /* Removing the default focus outline */
+}
+
+
+/* ---------------------- VIDEO IN INDEX ---------------------- */
+
+/* video text on index.html */
+#video-container {
+    position: relative;
+    width: 100%;
+    height: 646px;
+}
+
+#myVideo {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+video {
+    width: 100%;
+    /* the width to 100% to make the videos responsive */
+    height: 300px;
+    /* fixed height for all videos */
+    object-fit: cover;
+    /* maintain aspect ratio and cover the entire container */
+}
+
+#video-message {
+    position: absolute;
+    bottom: 90px;
+    /* Align to the bottom of the container */
+    left: -300px;
+    /* Align container to the far left of the parent */
+    transform: translate(0, 0);
+    /* Remove the translation */
+    text-align: left;
+    /* Align text to the left */
+    width: 100%;
+    padding-left: 20px;
+    /* Add some padding inside the container for spacing */
+    padding-bottom: 20px;
+    /* Add some padding at the bottom for spacing */
+    z-index: 2;
+}
+
+.video-message {
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2em;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+    transition: opacity 2s ease-in-out;
+    /* Smooth transition for opacity changes */
+    opacity: 0;
+    /* Start invisible */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    /* Needed for opacity transition */
+}
+
+/* ---------------------- DANNYE ---------------------- */
+
+/* Стили для контейнера загрузки */
+.upload-container {
+    max-width: 600px; /* Ограничиваем ширину контейнера */
+    margin: 20px auto; /* Автоматический вертикальный отступ для центровки и горизонтальный отступ */
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Легкая тень для добавления глубины */
+}
+
+/* Стили формы загрузки */
+.upload-container form {
+    display: flex;
+    align-items: center; /* Центрирование элементов формы по вертикали */
+    justify-content: space-between; /* Распределение элементов по горизонтали */
+}
+
+.upload-container input[type="file"] {
+    flex-grow: 1; /* Занимает все доступное пространство */
+    margin-right: 10px; /* Отступ справа */
+}
+
+.upload-container button {
+    padding: 8px 16px;
+    background-color: #007bff; /* Blue, for a friendly and noticeable button */
+    color: white;
+    border: none;
+    border-radius: 4px; /* Consistent rounded corners like the container */
+    cursor: pointer;
+}
+
+.upload-container button:hover {
+    background-color: #0056b3; /* Darker blue on hover for visual feedback */
+}
+
+/* Стили для списка файлов */
+.file-list {
+    max-width: 600px; /* Ширина аналогичная контейнеру загрузки */
+    margin: 20px auto; /* Отступы для центровки */
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.file-list div {
+    padding: 10px;
+    border-bottom: 1px solid #eee; /* Линия между файлами */
+}
+
+.file-list div:last-child {
+    border-bottom: none; /* Убираем линию у последнего элемента */
+}
+
+
+/* ---------------------- f ---------------------- */
+
+
+
+.inventory-container {
+    margin-left: 210px; /* Space for the navbar */
+    padding: 20px;
+    background-color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.inventory-header {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.inventory-date {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.inventory-search input {
+    margin-right: 5px;
+}
+
+.inventory-search button {
+    cursor: pointer;
+}
+
+.inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.inventory-table th, .inventory-table td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Header row style */
+.inventory-table thead tr {
+    background-color: #f4f4f4;
+}
+
+/* Zebra striping for rows */
+.inventory-table tbody tr:nth-child(odd) {
+    background-color: #fafafa;
+}
+
+.inventory-table tbody tr:hover {
+    background-color: #f0f0f0; /* Hover effect for rows */
+}
+
+
+/* ---------------------- PROFILE ---------------------- */
+
+
+.profile-container {
+    width: calc(100% - 210px); /* Account for navbar width */
+    margin-left: 210px;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.profile-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.profile-info p {
+    font-size: 1.2rem;
+    margin: 10px 0;
 }
