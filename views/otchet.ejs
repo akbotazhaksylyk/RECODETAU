@@ -12,13 +12,15 @@
         .inventory-hidden {
             display: none;
             opacity: 0;
-            transition: opacity 1s ease-in-out;
+            transition: opacity 0.5s, visibility 0.5s;
+            visibility: hidden;
         }
 
         .inventory-visible {
             display: block;
             opacity: 1;
-            transition: opacity 1s ease-in-out;
+            transition: opacity 0.5s, visibility 0.5s;
+            visibility: visible;
         }
     </style>
 </head>
@@ -34,9 +36,8 @@
                 <button>Обновить</button>
             </div>
             <div class="inventory-container inventory-hidden" id="inventoryStats">
-                <!-- Stats and images go here -->
-                <img src="../images/fourth_stats.png" style="max-width: 200px;">
-                <img src="../images/third_stats.png" style="max-width: 200px;">
+                <img src="../images/third_stats.png" style="max-width: 450px;">
+                <img src="../video/gif.gif" style="max-width: 200px;">
             </div>
             <table class="inventory-table inventory-hidden" id="inventoryTable">
                 <thead>
@@ -54,7 +55,7 @@
                     <!-- Repeat this row for each inventory item -->
                     <tr>
                         <td>Вино</td>
-                        <td>Вино из Шардоне</td>
+                        <td>Белое вино</td>
                         <td>EA</td>
                         <td>4</td>
                         <td>14.000</td>
@@ -69,10 +70,27 @@
             document.querySelector('.inventory-search button:last-child').addEventListener('click', function () {
                 var inventoryStats = document.getElementById('inventoryStats');
                 var inventoryTable = document.getElementById('inventoryTable');
-                inventoryStats.classList.toggle('inventory-hidden');
-                inventoryStats.classList.toggle('inventory-visible');
-                inventoryTable.classList.toggle('inventory-hidden');
-                inventoryTable.classList.toggle('inventory-visible');
+
+                // If the inventory is currently hidden, we want to make it visible
+                if (inventoryStats.classList.contains('inventory-hidden')) {
+                    inventoryStats.classList.remove('inventory-hidden');
+                    inventoryTable.classList.remove('inventory-hidden');
+
+                    // We need to force a reflow so the transition will be applied correctly
+                    void inventoryStats.offsetWidth;
+                    void inventoryTable.offsetWidth;
+
+                    inventoryStats.classList.add('inventory-visible');
+                    inventoryTable.classList.add('inventory-visible');
+                } else { // If the inventory is visible, we want to hide it
+                    inventoryStats.classList.remove('inventory-visible');
+                    inventoryTable.classList.remove('inventory-visible');
+
+                    setTimeout(() => {
+                        inventoryStats.classList.add('inventory-hidden');
+                        inventoryTable.classList.add('inventory-hidden');
+                    }, 500); // The timeout should match the CSS transition duration
+                }
             });
         </script>
 </body>

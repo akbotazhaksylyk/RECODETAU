@@ -21,7 +21,7 @@ router.post('/register', async (req, res) => {
         await newUser.save();
 
         // Redirect to login page or wherever you want
-        res.redirect('/login');
+        res.redirect('/overview');
     } catch (err) {
         console.error(err);
         // Handle errors, maybe render form again with error messages

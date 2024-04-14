@@ -515,7 +515,7 @@ video {
 
 .upload-container button {
     padding: 8px 16px;
-    background-color: #007bff; /* Blue, for a friendly and noticeable button */
+    background-color: #279186; /* Blue, for a friendly and noticeable button */
     color: white;
     border: none;
     border-radius: 4px; /* Consistent rounded corners like the container */
@@ -523,7 +523,7 @@ video {
 }
 
 .upload-container button:hover {
-    background-color: #0056b3; /* Darker blue on hover for visual feedback */
+    background-color: #218177; /* Darker blue on hover for visual feedback */
 }
 
 /* Стили для списка файлов */
