@@ -140,12 +140,12 @@ app.post('/login', (req, res, next) => {
     })(req, res, next);
 });
 
-app.get('/overview', (req, res) => {
-    if (!req.isAuthenticated()) {
-        return res.redirect('/login');
-    }
-    res.render('overview');
-});
+// app.get('/overview', (req, res) => {
+//     if (!req.isAuthenticated()) {
+//         return res.redirect('/login');
+//     }
+//     res.render('overview');
+// });
 
 app.use((req, res, next) => {
     console.log('Is authenticated:', req.isAuthenticated());
