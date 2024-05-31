@@ -199,7 +199,6 @@ app.delete('/delete/:filename', (req, res) => {
 
 
 
-
 app.get('/profile', async (req, res) => {
     try {
         // Retrieve user from the database; here we use a static ID, replace with dynamic logic.
@@ -213,10 +212,8 @@ app.get('/profile', async (req, res) => {
 
 
 
-
-
-
 // Server listening on port 3000
-app.listen(3000, () => {
-    console.log('Server running on port 3000');
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
